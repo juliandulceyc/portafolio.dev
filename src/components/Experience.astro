@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Creador de Contenido",
+    company: "Youtube",
+    description:
+      "Divulgo sobre programación y desarrollo web",
+    link: "https://www.youtube.com/@juliandulcey4233/videos",
+  },
+  {
+    date: "Septiembre 2025",
+    title: "Juego de Ajedrez",
+    company: "Autonomo",
+    description:
+      "Proyecto personal en desarrollo: juego de ajedrez construido con el stack MERN (MongoDB, Express, React, Node). Implementa lógica de movimiento y validación de reglas, partidas en tiempo real con Socket.io, autenticación de usuarios y persistencia de partidas. Actualmente en fase de diseño y prototipado.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
